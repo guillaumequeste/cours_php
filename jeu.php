@@ -3,6 +3,7 @@ $aDeviner = 150;
 $erreur = null;
 $succes = null;
 $value = null;
+
 if (isset($_POST['chiffre'])) {
     $value = (int)$_POST['chiffre'];
     if ($value > $aDeviner) {
@@ -12,11 +13,12 @@ if (isset($_POST['chiffre'])) {
     } else {
         $succes = "Bravo ! Vous avez deviné le chiffre <strong>$aDeviner</strong>";
     }
-    
 }
+
 require 'header.php';
 ?>
 
+<!-- messages -->
 <?php if ($erreur): ?>
 <div class="alert alert-danger">
     <?= $erreur ?>
@@ -27,6 +29,7 @@ require 'header.php';
 </div>
 <?php endif ?>
 
+<!-- formulaire du jeu -->
 <form action="jeu.php" method="POST">
     <div class="form-group">
         <input type="number" name="chiffre" class="form-control" placeholder="entre 0 et 1000" value="<?= $value ?>">

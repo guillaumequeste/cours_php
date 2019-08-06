@@ -1,6 +1,7 @@
 <?php
 // pour afficher les erreurs
 echo 'Loaded php.ini: ' . php_ini_loaded_file();
+
 $title = "Page d'accueil";
 require 'header.php';
 ?>

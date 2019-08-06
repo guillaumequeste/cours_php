@@ -1,3 +1,5 @@
+<!-- menu comme son nom l'indique -->
+
 <?php
 
 if (!function_exists('nav_item')) {
