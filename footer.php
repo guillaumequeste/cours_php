@@ -2,7 +2,16 @@
 <footer>
     <hr>
     <div class="row">
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <!-- compteur de vues (ici marche parce qu'on est le seul visiteur)
+                sur un site "normal", on fera pas comme ça -->
+            <?php
+            require_once 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
+            ajouter_vue();
+            $vues = nombre_vues();
+            ?>
+            Il y a <?= nombre_vues() ?> visite<?php if ($vues > 1):?>s<?php endif ?> sur le site.
+        </div>
         <div class="col-md-4">
             <!-- On inclut le formulaire pour s'inscrire à la newsletter -->
             <form action="newsletter.php" method="POST" class="form-inline">
