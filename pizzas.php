@@ -1,7 +1,9 @@
 <?php
 require_once 'functions.php';
 $title = "Notre menu";
+// On lit toutes les lignes du fichier 'pizzas.csv' situé dans le dossier data
 $lignes = file(__DIR__ . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'pizzas.csv');
+// On fait une boucle pour lire ligne par ligne
 foreach($lignes as $k => $ligne) {
     $lignes[$k] = explode("&", $ligne);
 }

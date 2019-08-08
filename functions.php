@@ -20,7 +20,10 @@ function nav_menu(string $linkClass = ''): string
 {
     return
     nav_item('/cours/index.php', 'Accueil', $linkClass) . 
+    nav_item('/cours/jeu.php', 'Jeu', $linkClass) . 
+    nav_item('/cours/glace.php', 'Glace', $linkClass) . 
     nav_item('/cours/pizzas.php', 'Pizzas', $linkClass) . 
+    nav_item('/cours/newsletter.php', 'Newsletter', $linkClass) . 
     nav_item('/cours/contact.php', 'Contact', $linkClass);
 }
 
