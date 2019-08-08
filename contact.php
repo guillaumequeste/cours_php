@@ -1,4 +1,7 @@
 <?php
+// on ouvre la session pour pouvoir récupérer les informations
+session_start();
+
 $title = "Nous contacter";
 require_once 'config.php';
 require_once 'functions.php';
@@ -24,7 +27,11 @@ require 'header.php';
     <div class="col-md-8">
         <h2>Nous contacter</h2>
         <p>Ceci est un paragraphe.</p>
+        <!-- <pre>
+            <?php var_dump($_SESSION); ?>
+        </pre> -->
     </div>
+
     <div class="col-md-4">
         <h2>Horaires d'ouverture :</h2>
 

@@ -1,6 +1,11 @@
 <?php
-// pour afficher les erreurs
-echo 'Loaded php.ini: ' . php_ini_loaded_file();
+/* pour afficher les erreurs
+echo 'Loaded php.ini: ' . php_ini_loaded_file(); */
+
+// on démarre une session
+session_start();
+// j'ajoute un rôle dans le tableau session : $_SESSION['role'] = 'administrateur';
+// j'enlève le rôle dans le tableau session : unset($_SESSION['role']);
 
 $title = "Page d'accueil";
 require 'header.php';
