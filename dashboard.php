@@ -1,5 +1,10 @@
 <?php
-require 'functions/compteur.php';
+
+require_once 'functions/auth.php';
+// renvoie l'utilisateur vers la page de login si celui-ci n'est pas connecté
+forcer_utilisateur_connecte();
+
+require_once 'functions/compteur.php';
 
 // $total = nombre_vues();
 $annee = (int)date('Y');

@@ -1,5 +1,11 @@
 <?php
+// si pas de session commencée, on en démarre une pour pouvoir appeler la fonction est_connecte() en bas de page
+// sinon message d'erreur
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once 'functions.php';
+require_once 'functions' . DIRECTORY_SEPARATOR . 'auth.php';
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +37,12 @@ require_once 'functions.php';
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <?= nav_menu('nav-link') ?>
+            </ul>
+            <ul class="navbar-nav">
+                <!-- affiche le lien pour se déconnecter si l'utilisateur est connecté -->
+                <?php if (est_connecte()): ?>
+                    <li class="nav-item"><a href="logout.php" class="nav-link">Se déconnecter</a></li>
+                <?php endif; ?>
             </ul>
         </div>
     </nav>
