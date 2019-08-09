@@ -1,9 +1,11 @@
 <?php
 $erreur = null;
+// password_hash('Doe', PASSWORD_DEFAULT, ['cost' => 12])
+$password = '$2y$12$VmlWOtO1SDl03QfXmohpy.9ekLB0AgEVe.miqqvyuRHK4V/GrPN.m';
 // vérifie que les identifiants sont corrects, démarre une session, met la valeur 1 à $_SESSION['connecte']
 // et redirige l'utilisateur vers le dashboard, sinon message d'erreur
 if (!empty($_POST['pseudo']) && !empty($_POST['motdepasse'])) {
-    if ($_POST['pseudo'] === 'John' && $_POST['motdepasse'] === 'Doe') {
+    if ($_POST['pseudo'] === 'John' && password_verify($_POST['motdepasse'], $password)) {
         session_start();
         $_SESSION['connecte'] = 1;
         header('Location: dashboard.php');
