@@ -7,7 +7,7 @@ function nav_item(string $lien, string $titre, string $linkClass = ''): string
     if ($_SERVER['SCRIPT_NAME'] === $lien) {
         $classe .= ' active';
     }
-    // heredoc <<<HTML ... HTML;
+    // heredoc <<<HTML ... HTML; permet de ne pas tout mettre entre guillemets
     return <<<HTML
     <li class="$classe">
         <a class="$linkClass" href="$lien">$titre</a>
