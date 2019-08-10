@@ -7,6 +7,7 @@ function ajouter_vue(): void {
     incrementer_compteur($fichier_journalier);
 }
 
+// incrémente le compteur et met le nombre dans le fichier compteur
 function incrementer_compteur(string $fichier): void {
     $compteur = 1;
     if (file_exists($fichier)) {

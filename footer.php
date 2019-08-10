@@ -6,11 +6,26 @@
             <!-- compteur de vues (ici marche parce qu'on est le seul visiteur)
                 sur un site "normal", on fera pas comme ça -->
             <?php
-            require_once 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
-            ajouter_vue();
-            $vues = nombre_vues();
+
+            /*  1ère méthode pour le compteur
+                require_once 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
+                ajouter_vue();
+                $vues = nombre_vues(); */
+            
+            // 2ème méthode pour le compteur
+            require_once 'class' . DIRECTORY_SEPARATOR . 'Compteur.php';
+            $compteur = new Compteur('data' . DIRECTORY_SEPARATOR . 'compteur');
+            // require_once 'class' . DIRECTORY_SEPARATOR . 'DoubleCompteur.php';
+            // $compteur = new DoubleCompteur('data' . DIRECTORY_SEPARATOR . 'compteur');
+            $compteur->incrementer();
+            $vues = $compteur->recuperer();
             ?>
-            Il y a <?= nombre_vues() ?> visite<?php if ($vues > 1):?>s<?php endif ?> sur le site.
+
+            <!-- 1ère méthode pour le compteur
+            Il y a (php) nombre_vues() (php) visite (php) if ($vues > 1):(php)s(php) endif (php) sur le site. -->
+
+            <!-- 2ème méthode pour le compteur -->
+            Il y a <?= $vues ?> visite<?php if ($vues > 1):?>s<?php endif ?> sur le site.
         </div>
         <div class="col-md-4">
             <!-- On inclut le formulaire pour s'inscrire à la newsletter -->
