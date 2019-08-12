@@ -3,6 +3,7 @@ class Form {
 
     public static $class = "form-control";
 
+    // laisse cochées les cases sélectionnées
     public static function checkbox(string $name, string $value = null, array $data = []): string
     {
         $attributes = '';

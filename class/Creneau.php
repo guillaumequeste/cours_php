@@ -11,16 +11,19 @@ class Creneau {
         $this->fin = $fin;
     }
 
+    // affiche un créneau
     public function toHTML(): string
     {
         return "<strong>{$this->debut}h</strong> à <strong>{$this->fin}h</strong";
     }
 
+    // renvoie true si l'heure est dans le créneau, sinon false
     public function inclutHeure(int $heure): bool 
     {
         return $heure >= $this->debut && $heure <= $this->fin;
     }
 
+    // est-ce que le créneau défini et le créneau passé en paramètre se croisent
     public function intersect(Creneau $creneau): bool
     {
         // est-ce que le créneau défini inclut le début du créneau que l'on passe en paramètre

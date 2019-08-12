@@ -28,7 +28,8 @@ function nav_menu(string $linkClass = ''): string
     nav_item('/cours/prive.php', 'Privé', $linkClass) . 
     nav_item('/cours/dashboard.php', 'Dashboard', $linkClass) . 
     nav_item('/cours/login.php', 'Login', $linkClass) . 
-    nav_item('/cours/contact.php', 'Contact', $linkClass);
+    nav_item('/cours/contact.php', 'Contact', $linkClass) . 
+    nav_item('/cours/livre.php', 'Livre d\'or', $linkClass);
 }
 
 // garde la cache cochée après la soumission du formulaire
