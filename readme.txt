@@ -8,3 +8,19 @@ public : accesssible à l'intérieur et depuis l'extérieur
 private : accessible uniquement au sein de la classe
 protected : accessible dans la classe et dans les classes enfants
 La fonction __construct est toujours public.
+
+Erreur certificat :
+string(77) "error setting certificate verify locations: CAfile: cert.cer CApath: none"
+ - Download the latest cacert.pem from https://curl.haxx.se/ca/cacert.pem
+   Add the following line to php.ini:
+   curl.cainfo="/path/to/downloaded/cacert.pem"
+- I had the same issue.
+  The solution provided by @pan-christensen did not work for me.
+  The website on which I was requesting in HTTPS was apparently using a custom(?) SSL certificate.
+  So, I opened the certificates in chrome and exported all (3) certificates I could: see screenshot
+  and added them to a custom mycertfile.pem
+  Then using it with Guzzle this way:
+  $client = new Client(['verify' => '/my/path/to/mycertfile.pem']);
+  Now it's working!
+  You can also download a certificate with the openssl command, but I my case it wasn't the right
+  certificate. So I had to download them manually.
