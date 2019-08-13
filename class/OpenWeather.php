@@ -9,6 +9,21 @@ class OpenWeather {
         $this->apiKey = $apiKey;
     }
 
+    /* se placer sur la ligne public function getForecast...
+        cmd + shift + i pour afficher ces lignes qui sont des lignes de commentaires
+        (plugin phpdoc-comment-vscode-plugin)
+        phpdoc.org */
+
+    /**
+     * Appelle l'API Openweather, récupère les prévisions sur plusieurs jours
+     *
+     * @param  string $city ville (ex: "Dieppe,fr")
+     * 
+     * @throws APIException curl a rencontré une erreur, on appelle la classe APIException
+     * @throws Exception curl a rencontré une erreur, on appelle la classe Exception
+     *
+     * @return array[]
+     */
     public function getForecast(string $city): ?array // ? : peut être null
     {   
         $curl = curl_init("http://api.openweathermap.org/data/2.5/forecast?q={$city}&units=metric&lang=fr&APPID={$this->apiKey}");
