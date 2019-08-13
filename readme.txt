@@ -1,3 +1,10 @@
+permet de voir les infos sur notre configuration php :
+phpinfo();
+die();
+Loaded configuration file : fichier de configuration chargé
+  -> display_errors = On
+  (pour afficher les erreurs)
+
 require_once '../functions.php' -----> require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions.php';
 
 Afficher les erreurs :
