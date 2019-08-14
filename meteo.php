@@ -1,5 +1,6 @@
 <?php
-require_once 'class/OpenWeather.php';
+require 'vendor/autoload.php';
+use Gui\OpenWeather;
 $error = null;
 try { // j'essaie d'exécuter la requête
     $weather = new OpenWeather('51fc8505d55fe845e4c757ea6b9ff0cf');

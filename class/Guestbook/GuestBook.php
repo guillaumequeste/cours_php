@@ -1,12 +1,12 @@
 <?php
 
+namespace Gui\Guestbook;
+
 // j'utilise la classe Message dans le namespace Gui\Guestbook
 use Gui\Guestbook\Message;
 /* je peux utiliser : namespace\Gui\Guestbook
     à ce moment là, plus besoin d'utiliser use mais il faut faire attention dans les autres fichiers :
     est-ce qu'il sait quelle classe utiliser */
-
-require_once 'Message.php';
 
 class GuestBook {
 

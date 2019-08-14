@@ -1,10 +1,14 @@
 <?php
 
-// j'utilise la classe Message dans le namespace Gui\Guestbook
-use \Gui\Guestbook\Message;
+require 'vendor/autoload.php';
 
-require_once 'class/Message.php';
-require_once 'class/GuestBook.php';
+// j'utilise la classe Message dans le namespace Gui\Guestbook
+use Gui\Guestbook\{
+    GuestBook,
+    Message
+};
+
+
 $errors = null;
 $success = false;
 $guestbook = new GuestBook(__DIR__ . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'messages');

@@ -1,4 +1,9 @@
 <?php
+
+namespace Gui;
+
+use \DateTime;
+
 require_once 'APIException.php';
 class OpenWeather {
 
