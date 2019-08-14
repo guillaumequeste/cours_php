@@ -1,5 +1,13 @@
 <?php
+
+// j'utilise la classe Message dans le namespace Gui\Guestbook
+use Gui\Guestbook\Message;
+/* je peux utiliser : namespace\Gui\Guestbook
+    à ce moment là, plus besoin d'utiliser use mais il faut faire attention dans les autres fichiers :
+    est-ce qu'il sait quelle classe utiliser */
+
 require_once 'Message.php';
+
 class GuestBook {
 
     private $file;
@@ -32,6 +40,7 @@ class GuestBook {
         $lines = explode(PHP_EOL, $content);
         $messages = [];
         foreach ($lines as $line) {
+            // j'utilise la classe Message dans le namespace \Gui\Guestbook
             $messages[] = Message::fromJSON($line);
         }
         return array_reverse($messages);

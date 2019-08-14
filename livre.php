@@ -1,4 +1,8 @@
 <?php
+
+// j'utilise la classe Message dans le namespace Gui\Guestbook
+use \Gui\Guestbook\Message;
+
 require_once 'class/Message.php';
 require_once 'class/GuestBook.php';
 $errors = null;

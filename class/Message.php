@@ -1,4 +1,24 @@
 <?php
+
+// je range la classe Message dans le namespace Gui\Guestbook
+namespace Gui\Guestbook;
+
+// je veux utiliser la classe DateTime qui se situe dans le dossier racine
+// si on ne met pas ça, il cherche la classe DateTime dans le namespace Gui\Guestbook
+use \DateTime;
+use \DateTimeZone;
+
+/* je peux utiliser plusieurs classes situées dans un namespace :
+    use Gui\Guestbook\ {
+        Guestbook,
+        Message
+    } */
+
+// je veux utiliser la classe Message située dans le namespace Gui\Contact :
+// use Gui\Contact\Message as ContactMessage;
+// j'utilise un alias et je peux ensuite appeler la classe :
+// $demo = new ContactMessage;
+
 class Message {
 
     const LIMIT_USERNAME = 3;
