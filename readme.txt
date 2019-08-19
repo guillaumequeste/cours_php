@@ -76,3 +76,14 @@ string(77) "error setting certificate verify locations: CAfile: cert.cer CApath:
       ex : Message.php -> namespace Gui\Guestbook;
            GuestBook.php -> namespace Gui\Guestbook;
   - plugin PHP namespace resolver -> clic droit sur la classe -> import class
+
+  Résumé autoloader :
+  1 - générer le fichier autoload.php
+  2 - indiquer dans la classe le namespace qui correcpond au chemin du fichier
+  3 - dans le fichier index.php, par exemple, require autoload.php et use le chemin vers la classe
+
+  Librairies tierces :
+  - composer require nom de la librairie -> dans le dossier vendor, nouveau dossier avec la librairie (packagist.org)
+  - lorsqu'on télécharge un projet et qu'on n'a pas le dossier vendor -> composer install
+      -> require dans le fichier autoload.php
+  - on utilise la librairie selon la documentation (dépôt github)
