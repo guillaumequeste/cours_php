@@ -19,19 +19,19 @@ HTML;
 function nav_menu(string $linkClass = ''): string
 {
     return
-    nav_item('/cours/index.php', 'Accueil', $linkClass) . 
-    nav_item('/cours/jeu.php', 'Jeu', $linkClass) . 
-    nav_item('/cours/glace.php', 'Glace', $linkClass) . 
-    nav_item('/cours/pizzas.php', 'Pizzas', $linkClass) . 
-    nav_item('/cours/newsletter.php', 'Newsletter', $linkClass) . 
-    nav_item('/cours/profil.php', 'Profil', $linkClass) . 
-    nav_item('/cours/prive.php', 'Privé', $linkClass) . 
-    nav_item('/cours/dashboard.php', 'Dashboard', $linkClass) . 
-    nav_item('/cours/login.php', 'Login', $linkClass) . 
-    nav_item('/cours/contact.php', 'Contact', $linkClass) . 
-    nav_item('/cours/livre.php', 'Livre d\'or', $linkClass) .
-    nav_item('/cours/meteo.php', 'Météo', $linkClass) .
-    nav_item('/cours/blog.php', 'Blog', $linkClass);
+    nav_item('/index.php', 'Accueil', $linkClass) . 
+    nav_item('/jeu.php', 'Jeu', $linkClass) . 
+    nav_item('/glace.php', 'Glace', $linkClass) . 
+    nav_item('/pizzas.php', 'Pizzas', $linkClass) . 
+    nav_item('/newsletter.php', 'Newsletter', $linkClass) . 
+    nav_item('/profil.php', 'Profil', $linkClass) . 
+    nav_item('/prive.php', 'Privé', $linkClass) . 
+    nav_item('/dashboard.php', 'Dashboard', $linkClass) . 
+    nav_item('/login.php', 'Login', $linkClass) . 
+    nav_item('/contact.php', 'Contact', $linkClass) . 
+    nav_item('/livre.php', 'Livre d\'or', $linkClass) .
+    nav_item('/meteo.php', 'Météo', $linkClass) .
+    nav_item('/blog.php', 'Blog', $linkClass);
 }
 
 // garde la cache cochée après la soumission du formulaire
@@ -70,7 +70,7 @@ function select(string $name, $value, array $options): string
 }
 
 // fonction pour afficher les données (ex: <?php dump($parfum))
-function dump($ariable) {
+function dump($variable) {
     echo '<pre'>
     var_dump($variable);
     echo '</pre>';

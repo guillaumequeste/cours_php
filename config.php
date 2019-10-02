@@ -1,5 +1,5 @@
 <?php
-// constatnt qui définit les jours de la semaine
+// constatnte qui définit les jours de la semaine
 define('JOURS', [
    'Lundi',
    'Mardi',
